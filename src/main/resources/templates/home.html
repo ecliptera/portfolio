@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind CSS Template</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-zinc-900">
+    <nav class="shadow-lg">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between">
+                <div>
+                    <a href="#" class="flex items-center py-5 px-2 text-zinc-100">
+                        <span class="font-bold">Oliver Knox</span>
+                    </a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden sm:flex items-center space-x-1">
+                    <a href="#" class="py-5 px-3 text-orange-600">Home</a>
+                    <a href="#" class="py-5 px-3 text-zinc-100 hover:text-orange-600">About</a>
+                    <a href="#" class="py-5 px-3 text-zinc-100 hover:text-orange-600">Projects</a>
+                    <a href="#" class="py-5 px-3 text-zinc-100 hover:text-orange-600">Experience</a>
+                    <a href="#" class="py-5 px-3 text-zinc-100 hover:text-orange-600">Contact</a>
+                </div>
+
+                <!-- Mobile Button -->
+                <div class="sm:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-zinc-100">
+                        <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden sm:hidden">
+            <a href="#" class="block py-5 px-6 text-sm text-zinc-100 bg-orange-700">Home</a>
+            <a href="#" class="block py-5 px-6 text-sm text-zinc-100 hover:bg-orange-700">About</a>
+            <a href="#" class="block py-5 px-6 text-sm text-zinc-100 hover:bg-orange-700">Projects</a>
+            <a href="#" class="block py-5 px-6 text-sm text-zinc-100 hover:bg-orange-700">Experience</a>
+            <a href="#" class="block py-5 px-6 text-sm text-zinc-100 hover:bg-orange-700">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-orange-700 text-zinc-100 flex justify-center items-center h-96">
+        <div class="container mx-auto text-center">
+            <h1 class="text-5xl font-bold mb-4">A Software Engineer</h1>
+            <p class="text-lg mb-8">Building scalable web services and distributed systems.</p>
+            <a href="#" class="py-2 px-4 bg-zinc-900 text-zinc-100 rounded hover:bg-zinc-800">Learn more</a>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="py-10 px-10 flex flex-col space-y-10">
+        <div class="flex flex-col sm:flex-row justify-center items-center space-y-10 sm:space-y-0 sm:space-x-10">
+            <img src="/images/teamwork.svg" height="300" width="300" alt="A group of people collaborating" />
+            <div class="max-w-xl sm:px-0 px-10">
+                <h1 class="text-3xl font-bold mb-4 text-zinc-100">Teamwork and collaboration</h1>
+                <p class="text-md text-zinc-400">
+                    Teamwork and collaboration are vital for effective software development.
+                    By embracing diverse perspectives and fostering open communication, a team can feel free to drive innovation and solve problems more efficiently.
+                    I have worked on many teams as a Software Engineer, and it has been clear to me that strong teamwork is key to continuous improvement and achieving shared goals.
+                </p>
+            </div>
+        </div>
+
+        <div class="flex flex-col sm:flex-row justify-center items-center space-y-10 sm:space-y-0 sm:space-x-10">
+            <img class="pb-4"  src="/images/software.svg" height="300" width="300" alt="A man with a software system" />
+            <div class="max-w-xl sm:px-0 px-10">
+                <h1 class="text-3xl font-bold mb-4 text-zinc-100">Software design and architecture</h1>
+                <p class="text-md text-zinc-400">
+                    Software design and architecture are foundational to creating scalable, maintainable, and robust systems.
+                    My experience as a Software Engineer has shown me the importance of well-thought-out architecture in ensuring long-term success.
+                    By focusing on clean design principles and architectural patterns, I have helped build solutions that are not only efficient but also adaptable to changing requirements.
+                </p>
+            </div>
+        </div>
+
+        <div class="flex flex-col sm:flex-row justify-center items-center space-y-10 sm:space-y-0 sm:space-x-10">
+            <img class="pb-4" src="/images/communication.svg" height="300" width="300" alt="Employees of a company communicating with each other" />
+            <div class="max-w-xl sm:px-0 px-10">
+                <h1 class="text-3xl font-bold mb-4 text-zinc-100">Communication and documentation</h1>
+                <p class="text-md text-zinc-400">
+                    Effective communication and thorough documentation are critical for aligning teams and ensuring continuity in software projects.
+                    In my role as a Software Engineer, I have consistently prioritized clear communication to bridge gaps between technical and non-technical stakeholders.
+                    And by creating comprehensive documentation, I have made it easier for colleagues to navigate and collaborate on shared codebases.
+                </p>
+            </div>
+        </div>
+
+        <div class="flex flex-col sm:flex-row justify-center items-center space-y-10 sm:space-y-0 sm:space-x-10">
+            <img class="pb-4" src="/images/observability.svg" height="300" width="300" alt="Two people monitoring a cloud system" />
+            <div class="max-w-xl sm:px-0 px-10">
+                <h1 class="text-3xl font-bold mb-4 text-zinc-100">Observability and monitoring</h1>
+                <p class="text-md text-zinc-400">
+                    Observability and monitoring are essential for maintaining the health and performance of software systems.
+                    Throughout my career, I have implemented robust monitoring solutions that provide real-time insights, enabling proactive issue resolution and system optimization.
+                    Treating observability as a necessity is crucial, because it helps ensure that systems are resilient and capable of meeting the demands of users, ultimately driving higher reliability and user satisfaction.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-orange-700 text-zinc-100 flex justify-center items-center h-16"></footer>
+
+    <script>
+        // Toggle mobile menu
+        const button = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
+
+        button.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
