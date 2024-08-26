@@ -1,0 +1,40 @@
+<header th:fragment="headerFragment(currentPage)">
+    <nav class="shadow-lg">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between">
+                <div>
+                    <a href="#" class="flex items-center py-5 px-2 text-zinc-100">
+                        <span class="font-bold">Oliver Knox</span>
+                    </a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden sm:flex items-center space-x-1">
+                    <a href="#" class="py-5 px-3" th:classappend="${currentPage == 'HOME' ? 'text-orange-600' : 'text-zinc-100 hover:text-orange-600'}">Home</a>
+                    <a href="#" class="py-5 px-3" th:classappend="${currentPage == 'ABOUT' ? 'text-orange-600' : 'text-zinc-100 hover:text-orange-600'}">About</a>
+                    <a href="#" class="py-5 px-3" th:classappend="${currentPage == 'PROJECTS' ? 'text-orange-600' : 'text-zinc-100 hover:text-orange-600'}">Projects</a>
+                    <a href="#" class="py-5 px-3" th:classappend="${currentPage == 'EXPERIENCE' ? 'text-orange-600' : 'text-zinc-100 hover:text-orange-600'}">Experience</a>
+                    <a href="#" class="py-5 px-3" th:classappend="${currentPage == 'CONTACT' ? 'text-orange-600' : 'text-zinc-100 hover:text-orange-600'}">Contact</a>
+                </div>
+
+                <!-- Mobile Button -->
+                <div class="sm:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-zinc-100">
+                        <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden sm:hidden">
+            <a href="#" class="block py-5 px-6 text-sm text-zinc-100" th:classappend="${currentPage == 'HOME' ? 'bg-orange-700' : 'hover:bg-orange-700'}">Home</a>
+            <a href="#" class="block py-5 px-6 text-sm text-zinc-100" th:classappend="${currentPage == 'ABOUT' ? 'bg-orange-700' : 'hover:bg-orange-700'}">About</a>
+            <a href="#" class="block py-5 px-6 text-sm text-zinc-100" th:classappend="${currentPage == 'PROJECTS' ? 'bg-orange-700' : 'hover:bg-orange-700'}">Projects</a>
+            <a href="#" class="block py-5 px-6 text-sm text-zinc-100" th:classappend="${currentPage == 'EXPERIENCE' ? 'bg-orange-700' : 'hover:bg-orange-700'}">Experience</a>
+            <a href="#" class="block py-5 px-6 text-sm text-zinc-100" th:classappend="${currentPage == 'CONTACT' ? 'bg-orange-700' : 'hover:bg-orange-700'}">Contact</a>
+        </div>
+    </nav>
+</header>
