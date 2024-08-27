@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <div th:replace="~{fragments/head :: headFragment(title = 'Oliver Knox - Projects')}"></div>
+    <body class="bg-zinc-900">
+        <div th:replace="~{fragments/header :: headerFragment(currentPage=${currentPage.name()})}"></div>
+
+        <!-- Hero Section -->
+        <section class="bg-orange-700 text-zinc-100 flex justify-center items-center h-96">
+            <div class="container mx-auto text-center">
+                <h1 class="text-5xl font-bold mb-4">Projects</h1>
+                <p class="text-lg mb-8">Building software, one commit at a time.</p>
+            </div>
+        </section>
+
+        <!-- Content Section -->
+        <section class="py-20 px-10 flex justify-center">
+            <div class="max-w-5xl w-full grid lg:grid-cols-2 gap-10">
+               <div th:each="project : ${projects}">
+                   <div th:replace="~{fragments/project-card :: projectCardFragment(project=${project})}"></div>
+               </div>
+            </div>
+        </section>
+
+        <footer class="bg-orange-700 text-zinc-100 flex justify-center items-center h-16"></footer>
+    </body>
+</html>

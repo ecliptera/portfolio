@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-    <div th:replace="fragments/head :: headFragment(title = 'Oliver Knox')"></div>
+    <div th:replace="~{fragments/head :: headFragment(title = 'Oliver Knox')}"></div>
     <body class="bg-zinc-900">
-        <div th:replace="fragments/header :: headerFragment(currentPage=${currentPage.name()})"></div>
+        <div th:replace="~{fragments/header :: headerFragment(currentPage=${currentPage.name()})}"></div>
 
         <!-- Hero Section -->
         <section class="bg-orange-700 text-zinc-100 flex justify-center items-center h-96">
@@ -17,7 +17,7 @@
         <section class="py-20 px-10 flex flex-col space-y-10" >
             <div class="flex flex-col sm:flex-row justify-center items-center space-y-10 sm:space-y-0 sm:space-x-10">
                 <img src="/images/software.svg" alt="A man with a software system" height="300" width="300" />
-                <div class="max-w-xl">
+                <div class="max-w-3xl">
                     <h1 class="text-3xl font-bold mb-4 text-zinc-100">Software design and architecture</h1>
                     <p class="text-md text-zinc-300">
                         Software design and architecture are foundational to creating scalable, maintainable, and robust systems.
@@ -29,7 +29,7 @@
 
             <div class="flex flex-col sm:flex-row justify-center items-center space-y-10 sm:space-y-0 sm:space-x-10">
                 <img src="/images/communication.svg" alt="Employees of a company communicating with each other" height="300" width="300" />
-                <div class="max-w-xl">
+                <div class="max-w-3xl">
                     <h1 class="text-3xl font-bold mb-4 text-zinc-100">Communication and documentation</h1>
                     <p class="text-md text-zinc-300">
                         Effective communication and thorough documentation are critical for aligning teams and ensuring continuity in software projects.
@@ -41,7 +41,7 @@
 
             <div class="flex flex-col sm:flex-row justify-center items-center space-y-10 sm:space-y-0 sm:space-x-10">
                 <img src="/images/observability.svg" alt="Two people monitoring a cloud system" height="300" width="300" />
-                <div class="max-w-xl">
+                <div class="max-w-3xl">
                     <h1 class="text-3xl font-bold mb-4 text-zinc-100">Observability and monitoring</h1>
                     <p class="text-md text-zinc-300">
                         Observability and monitoring are essential for maintaining the health and performance of software systems.
@@ -53,7 +53,7 @@
 
             <div class="flex flex-col sm:flex-row justify-center items-center space-y-10 sm:space-y-0 sm:space-x-10">
                 <img src="/images/teamwork.svg" alt="A group of people collaborating" height="300" width="300" />
-                <div class="max-w-xl">
+                <div class="max-w-3xl">
                     <h1 class="text-3xl font-bold mb-4 text-zinc-100">Teamwork and collaboration</h1>
                     <p class="text-md text-zinc-300">
                         Teamwork and collaboration are vital for effective software development.
