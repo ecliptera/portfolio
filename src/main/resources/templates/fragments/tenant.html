@@ -1,9 +1,0 @@
-<!--/*@thymesVar id="tenant" type="net.gb.knox.portfolio.domain.Tenant"*/-->
-<div th:fragment="tenantFragment(tenant)" class="flex flex-col sm:flex-row justify-center items-center space-y-10 sm:space-y-0 sm:space-x-10">
-    <img th:src="${tenant.img().src()}" th:alt="${tenant.img().alt()}" height="300" width="300" />
-    <div class="max-w-xl">
-        <h1 class="text-3xl font-bold mb-4 text-zinc-100" th:text="${tenant.title()}"></h1>
-        <p class="text-md text-zinc-300" th:text="${tenant.description()}">
-        </p>
-    </div>
-</div>
