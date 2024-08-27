@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <div th:replace="fragments/head :: headFragment(title = 'Oliver Knox - About')"></div>
+    <body class="bg-zinc-900">
+        <div th:replace="fragments/header :: headerFragment(currentPage=${currentPage.name()})"></div>
+
+        <!-- Hero Section -->
+        <section class="bg-orange-700 text-zinc-100 flex justify-center items-center h-96">
+            <div class="container mx-auto text-center">
+                <h1 class="text-5xl font-bold mb-4">About me</h1>
+                <p class="text-lg mb-8">Technology enthusiast with a love for challenges.</p>
+            </div>
+        </section>
+
+        <!-- Content Section -->
+        <section class="py-20 px-10 flex justify-center">
+            <div class="max-w-3xl flex flex-col space-y-10">
+                <div class="flex flex-col">
+                    <h1 class="text-3xl font-bold mb-4 text-zinc-100">Introduction</h1>
+                    <p class="text-md text-zinc-100">
+                        Hi! I’m <span class="text-orange-600">Oliver</span>, a tech enthusiast with a passion for solving complex challenges, whether it’s debugging a tricky piece of code or strategising in the latest video game.
+                        My love for technology drives me to constantly learn and <span class="text-orange-600">push the boundaries</span> of what’s possible, but it’s the satisfaction of overcoming obstacles that truly keeps me going.
+                    </p>
+                </div>
+                <div class="flex flex-col">
+                    <h1 class="text-3xl font-bold mb-4 text-zinc-100">Life with my dogs</h1>
+                    <p class="text-md text-zinc-300">
+                        When I’m not diving deep into the latest tech trends or working on a challenging project, you’ll find me spending quality time with my dogs, who are the <span class="text-orange-600">best companions</span> after a long day of coding.
+                        They <span class="text-orange-600">keep me grounded</span> and remind me to take breaks, even when I’m knee-deep in a particularly tricky problem.
+                    </p>
+                </div>
+                <div class="flex flex-col">
+                    <h1 class="text-3xl font-bold mb-4 text-zinc-100">Need for speed</h1>
+                    <p class="text-md text-zinc-100">
+                        I’m also a huge Formula 1 fan—there is something about the <span class="text-orange-600">combination of speed, strategy, and precision</span> that resonates with how I approach my work.
+                        Just like in F1, I believe that success comes from a balance of skill, innovation, and teamwork.
+                    </p>
+                </div>
+                <div class="flex flex-col">
+                    <h1 class="text-3xl font-bold mb-4 text-zinc-100">The gaming edge</h1>
+                    <p class="text-md text-zinc-100">
+                        Video games are another passion of mine, offering not just entertainment but also a way to hone my <span class="text-orange-600">problem-solving skills</span> in a different environment.
+                        Whether it’s navigating complex levels or mastering in-game strategies, I see video games as a fun extension of my <span class="text-orange-600">analytical thinking.</span>
+                    </p>
+                </div>
+                <div class="flex flex-col">
+                    <h1 class="text-3xl font-bold mb-4 text-zinc-100">Philosophy and approach</h1>
+                    <p class="text-md text-zinc-100">
+                        In essence, I’m <span class="text-orange-600">driven by curiosity</span> and the desire to solve problems, both big and small.
+                        Whether I’m writing code, playing with my dogs, or cheering on my favorite F1 team, I approach everything with the same <span class="text-orange-600">enthusiasm</span> and determination.
+                        I believe that the best solutions often come from combining diverse interests and perspectives—and that is what I <span class="text-orange-600">strive</span> to bring to every thing I do, be it at home or work.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <footer class="bg-orange-700 text-zinc-100 flex justify-center items-center h-16"></footer>
+
+        <script>
+            // Toggle mobile menu
+            const button = document.getElementById('mobile-menu-button');
+            const menu = document.getElementById('mobile-menu');
+
+            button.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+            });
+        </script>
+    </body>
+</html>

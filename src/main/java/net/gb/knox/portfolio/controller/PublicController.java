@@ -15,12 +15,6 @@ public class PublicController {
     private final List<Tenant> tenants;
 
     public PublicController() {
-        var teamwork = new Tenant(new Image("/images/teamwork.svg", "A group of people collaborating"),
-                "Teamwork and collaboration",
-                "Teamwork and collaboration are vital for effective software development. " +
-                        "By embracing diverse perspectives and fostering open communication, a team can feel free to drive innovation and solve problems more efficiently. " +
-                        "I have worked on many teams as a Software Engineer, and it has been clear to me that strong teamwork is key to continuous improvement and achieving shared goals.");
-
         var software = new Tenant(new Image("/images/software.svg", "A man with a software system"),
                 "Software design and architecture",
                 "Software design and architecture are foundational to creating scalable, maintainable, and robust systems. " +
@@ -39,7 +33,13 @@ public class PublicController {
                         "Throughout my career, I have implemented robust monitoring solutions that provide real-time insights, enabling proactive issue resolution and system optimization. " +
                         "Treating observability as a necessity is crucial, because it helps ensure that systems are resilient and capable of meeting the demands of users, ultimately driving higher reliability and user satisfaction.");
 
-        tenants = List.of(teamwork, software, communication, observability);
+        var teamwork = new Tenant(new Image("/images/teamwork.svg", "A group of people collaborating"),
+                "Teamwork and collaboration",
+                "Teamwork and collaboration are vital for effective software development. " +
+                        "By embracing diverse perspectives and fostering open communication, a team can feel free to drive innovation and solve problems more efficiently. " +
+                        "I have worked on many teams as a Software Engineer, and it has been clear to me that strong teamwork is key to continuous improvement and achieving shared goals.");
+
+        tenants = List.of(software, communication, observability, teamwork);
     }
 
     @GetMapping
@@ -47,5 +47,11 @@ public class PublicController {
         model.addAttribute("currentPage", Page.HOME);
         model.addAttribute("tenants", tenants);
         return "home";
+    }
+
+    @GetMapping("/about")
+    public String about(Model model) {
+        model.addAttribute("currentPage", Page.ABOUT);
+        return "about";
     }
 }

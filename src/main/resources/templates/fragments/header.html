@@ -3,15 +3,15 @@
         <div class="max-w-7xl mx-auto px-4">
             <div class="flex justify-between">
                 <div>
-                    <a href="#" class="flex items-center py-5 px-2 text-zinc-100">
+                    <a href="/" class="flex items-center py-5 px-2 text-zinc-100">
                         <span class="font-bold">Oliver Knox</span>
                     </a>
                 </div>
 
                 <!-- Desktop Menu -->
                 <div class="hidden sm:flex items-center space-x-1">
-                    <a href="#" class="py-5 px-3" th:classappend="${currentPage == 'HOME' ? 'text-orange-600' : 'text-zinc-100 hover:text-orange-600'}">Home</a>
-                    <a href="#" class="py-5 px-3" th:classappend="${currentPage == 'ABOUT' ? 'text-orange-600' : 'text-zinc-100 hover:text-orange-600'}">About</a>
+                    <a href="/" class="py-5 px-3" th:classappend="${currentPage == 'HOME' ? 'text-orange-600' : 'text-zinc-100 hover:text-orange-600'}">Home</a>
+                    <a href="/about" class="py-5 px-3" th:classappend="${currentPage == 'ABOUT' ? 'text-orange-600' : 'text-zinc-100 hover:text-orange-600'}">About</a>
                     <a href="#" class="py-5 px-3" th:classappend="${currentPage == 'PROJECTS' ? 'text-orange-600' : 'text-zinc-100 hover:text-orange-600'}">Projects</a>
                     <a href="#" class="py-5 px-3" th:classappend="${currentPage == 'EXPERIENCE' ? 'text-orange-600' : 'text-zinc-100 hover:text-orange-600'}">Experience</a>
                     <a href="#" class="py-5 px-3" th:classappend="${currentPage == 'CONTACT' ? 'text-orange-600' : 'text-zinc-100 hover:text-orange-600'}">Contact</a>
