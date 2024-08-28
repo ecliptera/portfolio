@@ -14,7 +14,7 @@
 
         <!-- Content Section -->
         <section class="py-32 px-10 flex justify-center">
-            <div class="max-w-5xl w-full grid lg:grid-cols-2 gap-10">
+            <div class="max-w-5xl w-full grid lg:grid-cols-2 gap-y-20 gap-x-10">
                <div th:each="project : ${projects}">
                    <div th:replace="~{fragments/project-card :: projectCardFragment(project=${project})}"></div>
                </div>

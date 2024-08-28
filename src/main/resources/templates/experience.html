@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <div th:replace="~{fragments/head :: headFragment(title = 'Oliver Knox - Experience')}"></div>
+    <body class="bg-zinc-900">
+        <div th:replace="~{fragments/header :: headerFragment(currentPage=${currentPage.name()})}"></div>
+
+        <!-- Hero Section -->
+        <section class="bg-orange-700 text-zinc-100 flex justify-center items-center h-96">
+            <div class="container mx-auto text-center">
+                <h1 class="text-5xl font-bold mb-4">Experience</h1>
+                <p class="text-lg mb-8">The path so far.</p>
+            </div>
+        </section>
+
+        <!-- Content Section -->
+        <section class="py-32 px-10 flex justify-center">
+            <div class="max-w-5xl w-full flex flex-col space-y-20">
+                <div class="bg-zinc-800 p-10 rounded-sm w-full">
+                    <div class="flex flex-col md:flex-row items-center justify-between space-x-4 border-b-4 border-orange-600 mb-8">
+                        <h1 class="text-3xl font-bold mb-4 text-zinc-100 text-center md:text-left">Interactive Investor • App Developer</h1>
+                        <span class="text-lg font-bold mb-4 text-zinc-200 whitespace-nowrap">Mar 2024 - Present</span>
+                    </div>
+                    <ul class="text-md text-zinc-300 space-y-4">
+                        <li>Played a key role in the development of an innovative investment service application, designed to streamline and enhance users’ investment management.</li>
+                        <li>Contributed to various stages of the project, including solution design, project planning, stakeholder meetings, implementation and maintenance.</li>
+                        <li>Collaborated with cross-functional teams to ensure the app delivered a seamless and secure experience, integrating advanced features such as  open banking transactions, real-time analytics, and cross-platform integration.</li>
+                        <li>Focused on optimizing performance and scalability to meet the needs of a growing user base, ultimately delivering a robust application that supports informed investment decisions and drives user engagement.</li>
+                    </ul>
+                </div>
+                <div class="bg-zinc-800 p-10 rounded-sm w-full">
+                    <div class="flex flex-col md:flex-row items-center justify-between space-x-4 border-b-4 border-orange-600 mb-8">
+                        <h1 class="text-3xl font-bold mb-4 text-zinc-100 text-center md:text-left">Gamma Labs • Software Engineer</h1>
+                        <span class="text-lg font-bold mb-4 text-zinc-200 whitespace-nowrap">Sep 2022 - Jan 2024</span>
+                    </div>
+                    <ul class="text-md text-zinc-300 space-y-4">
+                        <li>Contributed to the development of a React-based UCaaS application, enhancing backend services to support PSTN, video calling, and chat functionalities for end users.</li>
+                        <li>Addressed and resolved production issues, optimized deployments, and managed CI/CD pipelines for front-end repositories, ensuring smooth integration with backend systems.</li>
+                        <li>Maintained and improved the performance of two existing telecommunications applications, managing client and server-side logic to efficiently handle thousands of users across Europe.</li>
+                        <li>Played a crucial role in the delivery of a real-time presence tracking system to provide seamless visibility into user availability and engagement.</li>
+                    </ul>
+                </div>
+                <div class="bg-zinc-800 p-10 rounded-sm w-full">
+                    <div class="flex flex-col md:flex-row items-center justify-between space-x-4 border-b-4 border-orange-600 mb-8">
+                        <h1 class="text-3xl font-bold mb-4 text-zinc-100 text-center md:text-left">Evidential • Apprentice Software Engineer</h1>
+                        <span class="text-lg font-bold mb-4 text-zinc-200 whitespace-nowrap">Jul 2018 - Jul 2022</span>
+                    </div>
+                    <ul class="text-md text-zinc-300 space-y-4">
+                        <li>Developed secure and scalable microservices using Node.js, collaborating closely with senior engineers to deploy solutions on cloud infrastructure, enhancing system performance and reliability.</li>
+                        <li>Engineered web and desktop applications utilizing React, Stencil, and Electron, significantly contributing to the efficient delivery of evidence in crown court proceedings across the UK.</li>
+                        <li>Spearheaded the development of a hybrid application for web and mobile platforms, leveraging cutting-edge technologies such as Ionic and Capacitor to ensure cross-platform compatibility.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <footer class="bg-orange-700 text-zinc-100 flex justify-center items-center h-16"></footer>
+    </body>
+</html>

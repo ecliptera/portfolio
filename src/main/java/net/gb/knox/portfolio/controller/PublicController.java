@@ -37,4 +37,10 @@ public class PublicController {
         model.addAttribute("projects", gitHubService.getProjects());
         return "projects";
     }
+
+    @GetMapping("/experience")
+    public String experience(Model model) {
+        model.addAttribute("currentPage", Page.EXPERIENCE);
+        return "experience";
+    }
 }
