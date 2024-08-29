@@ -1,59 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
     <div th:replace="~{fragments/head :: headFragment(title = 'Oliver Knox - About')}"></div>
-    <body class="bg-zinc-900">
+    <body class="bg-white text-zinc-900">
         <div th:replace="~{fragments/header :: headerFragment(currentPage=${currentPage.name()})}"></div>
 
         <!-- Hero Section -->
-        <section class="bg-orange-700 text-zinc-100 flex justify-center items-center h-96">
+        <section class="bg-orange-600 flex text-zinc-100 justify-center items-center h-96">
             <div class="container mx-auto text-center">
                 <h1 class="text-5xl font-bold mb-4">About me</h1>
                 <p class="text-lg mb-8">Technology enthusiast with a love for challenges.</p>
+                <a href="#content" class="py-2 px-4 text-zinc-900 rounded bg-white hover:text-orange-600">Learn more</a>
             </div>
         </section>
 
         <!-- Content Section -->
-        <section class="py-32 px-10 flex justify-center">
-            <div class="max-w-5xl flex flex-col space-y-20">
-                <div class="flex flex-col">
-                    <h1 class="text-3xl font-bold mb-4 text-zinc-100">Introduction</h1>
-                    <p class="text-md text-zinc-300">
-                        Hi! I’m <span class="text-orange-600">Oliver</span>, a tech enthusiast with a passion for solving complex challenges, whether it’s debugging a tricky piece of code or strategising in the latest video game.
-                        My love for technology drives me to constantly learn and <span class="text-orange-600">push the boundaries</span> of what’s possible, but it’s the satisfaction of overcoming obstacles that truly keeps me going.
-                    </p>
-                </div>
-                <div class="flex flex-col">
-                    <h1 class="text-3xl font-bold mb-4 text-zinc-100">Life with my dogs</h1>
-                    <p class="text-md text-zinc-300">
-                        When I’m not diving deep into the latest tech trends or working on a challenging project, you’ll find me spending quality time with my dogs, who are the <span class="text-orange-600">best companions</span> after a long day of coding.
-                        They <span class="text-orange-600">keep me grounded</span> and remind me to take breaks, even when I’m knee-deep in a particularly tricky problem.
-                    </p>
-                </div>
-                <div class="flex flex-col">
-                    <h1 class="text-3xl font-bold mb-4 text-zinc-100">Need for speed</h1>
-                    <p class="text-md text-zinc-300">
-                        I’m also a huge Formula 1 fan—there is something about the <span class="text-orange-600">combination of speed, strategy, and precision</span> that resonates with how I approach my work.
-                        Just like in F1, I believe that success comes from a balance of skill, innovation, and teamwork.
-                    </p>
-                </div>
-                <div class="flex flex-col">
-                    <h1 class="text-3xl font-bold mb-4 text-zinc-100">The gaming edge</h1>
-                    <p class="text-md text-zinc-300">
-                        Video games are another passion of mine, offering not just entertainment but also a way to hone my <span class="text-orange-600">problem-solving skills</span> in a different environment.
-                        Whether it’s navigating complex levels or mastering in-game strategies, I see video games as a fun extension of my <span class="text-orange-600">analytical thinking.</span>
-                    </p>
-                </div>
-                <div class="flex flex-col">
-                    <h1 class="text-3xl font-bold mb-4 text-zinc-100">Philosophy and approach</h1>
-                    <p class="text-md text-zinc-300">
-                        In essence, I’m <span class="text-orange-600">driven by curiosity</span> and the desire to solve problems, both big and small.
-                        Whether I’m writing code, playing with my dogs, or cheering on my favorite F1 team, I approach everything with the same <span class="text-orange-600">enthusiasm</span> and determination.
-                        I believe that the best solutions often come from combining diverse interests and perspectives—and that is what I <span class="text-orange-600">strive</span> to bring to every thing I do, be it at home or work.
-                    </p>
-                </div>
+        <section id="content" class="max-w-7xl mx-auto flex flex-col space-y-8 px-4 py-16">
+            <div class="flex flex-col space-y-4 bg-zinc-50 p-8 rounded-sm border-b-4 border-orange-600">
+                <h1 class="text-3xl font-bold">Introduction</h1>
+                <p class="text-md">
+                    Hello! I’m Oliver, a dedicated tech enthusiast with a thirst for knowledge and a passion for tackling complex challenges head-on.
+                    Whether it’s debugging a particularly stubborn piece of code or devising a winning strategy in the latest video game, I thrive on the thrill of problem-solving.
+                    My journey into the world of technology began early on, and it has been a driving force in my life ever since.
+                    I’m constantly exploring new frontiers, pushing the boundaries of what’s possible, and seeking innovative solutions to the challenges that come my way.
+                    While technology fuels my ambition, it’s the profound satisfaction of overcoming obstacles—no matter how big or small—that truly ignites my passion and keeps me going every day.
+                </p>
+            </div>
+            <div class="flex flex-col space-y-4 bg-zinc-50 p-8 rounded-sm border-b-4 border-orange-600">
+                <h1 class="text-3xl font-bold ">Life with my dogs</h1>
+                <p class="text-md">
+                    When I’m not immersing myself in the latest tech trends or working on a particularly challenging project, you’ll likely find me spending quality time with my dogs.
+                    They’re more than just pets—they’re my loyal companions and the perfect antidote to the fast-paced, high-stress world of technology.
+                    My dogs have an uncanny ability to keep me grounded, reminding me of the importance of balance and taking time to recharge.
+                    Whether we’re enjoying a long walk in the park, playing fetch, or simply relaxing at home, they help me maintain perspective and ensure that I don’t lose sight of life’s simpler joys.
+                    In many ways, they are my silent partners in problem-solving, offering the kind of support and comfort that only a dog can provide, especially after a long day spent deep in code or brainstorming solutions.
+                </p>
+            </div>
+            <div class="flex flex-col space-y-4 bg-zinc-50 p-8 rounded-sm border-b-4 border-orange-600">
+                <h1 class="text-3xl font-bold">Need for speed</h1>
+                <p class="text-md">
+                    Beyond the digital realm, I’m also a huge Formula 1 fan—a passion that complements my love for technology and problem-solving.
+                    There’s something truly exhilarating about the combination of speed, strategy, and precision that defines Formula 1 racing.
+                    It’s a sport that requires not just raw skill but also a deep understanding of mechanics, aerodynamics, and the importance of teamwork—elements that resonate strongly with how I approach my work in tech.
+                    Just as in F1, I believe that achieving success in any field requires a delicate balance of skill, innovation, and collaboration.
+                    The meticulous preparation and split-second decisions that define Formula 1 inspire me to apply the same level of dedication and focus to my projects, whether I’m coding, debugging, or leading a team.
+                </p>
+            </div>
+            <div class="flex flex-col space-y-4 bg-zinc-50 p-8 rounded-sm border-b-4 border-orange-600">
+                <h1 class="text-3xl font-bold">The gaming edge</h1>
+                <p class="text-md">
+                    Another of my passions lies in the world of video games, which for me, offer far more than just entertainment.
+                    Video games are a powerful tool for sharpening my problem-solving abilities in a dynamic and often unpredictable environment.
+                    Each game presents its own set of challenges, whether it’s navigating through complex levels, devising in-game strategies, or competing against other players.
+                    Video games are not just a pastime—they’re a way to refine my analytical thinking and creativity in a space that’s both engaging and fun.
+                    The skills I develop through gaming often translate into my professional life, where I tackle coding challenges and technical problems with the same determination and strategic mindset that I use in games.
+                </p>
+            </div>
+            <div class="flex flex-col space-y-4 bg-zinc-50 p-8 rounded-sm border-b-4 border-orange-600">
+                <h1 class="text-3xl font-bold">Philosophy and approach</h1>
+                <p class="text-md">
+                    At the core of everything I do is a curiosity and a relentless drive to solve problems.
+                    This philosophy permeates every aspect of my life, whether I’m writing code, spending time with my dogs, or cheering on my favorite Formula 1 team.
+                    I approach each new challenge with the same level of enthusiasm and determination, always seeking to learn, grow, and innovate.
+                    By combining my passion for technology, love for animals, fascination with speed, and enjoyment of gaming, I bring a unique and holistic approach to every project I undertake, both at home and in the workplace.
+                    My goal is to continue pushing the limits of what’s possible, not just in technology but in every facet of life, always with the aim of achieving the best possible outcomes.
+                </p>
             </div>
         </section>
 
-        <footer class="bg-orange-700 text-zinc-100 flex justify-center items-center h-16"></footer>
+        <div th:replace="~{fragments/footer :: footerFragment()}"></div>
     </body>
 </html>

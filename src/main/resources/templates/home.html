@@ -14,9 +14,8 @@
         </section>
 
         <!-- Content Section -->
-        <section id="content" class="max-w-7xl mx-auto flex flex-col space-y-4 px-4 py-8" >
-            <div class="flex flex-col md:flex-row items-center space-x-4 space-y-4">
-                <img src="/images/software.svg" alt="A man with a software system" height="300" width="300" />
+        <section id="content" class="max-w-7xl mx-auto flex flex-col space-y-8 px-4 py-16">
+            <div class="flex flex-col items-center space-y-4 bg-zinc-50 p-8 rounded-sm border-b-4 border-orange-600">
                 <div class="flex flex-col space-y-4">
                     <h1 class="text-3xl font-bold">Software design and architecture</h1>
                     <p class="text-md">
@@ -25,11 +24,11 @@
                         By focusing on clean design principles and architectural patterns, I have helped build solutions that are not only efficient but also adaptable to changing requirements.
                     </p>
                 </div>
+                <img src="/images/software.svg" alt="A man with a software system" height="300" width="300" />
             </div>
 
-            <div class="flex flex-col md:flex-row items-center space-x-4 space-y-4">
-                <img src="/images/communication.svg" alt="Employees of a company communicating with each other" height="300" width="300" />
-                <div class="flex flex-col space-y-4">
+            <div class="flex flex-col items-center space-y-4 bg-zinc-50 p-8 rounded-sm border-b-4 border-orange-600">
+                <div class="flex flex-col space-y-4 ">
                     <h1 class="text-3xl font-bold">Communication and documentation</h1>
                     <p class="text-md">
                         Effective communication and thorough documentation are critical for aligning teams and ensuring continuity in software projects.
@@ -37,10 +36,10 @@
                         And by creating comprehensive documentation, I have made it easier for colleagues to navigate and collaborate on shared codebases.
                     </p>
                 </div>
+                <img src="/images/communication.svg" alt="Employees of a company communicating with each other" height="300" width="300" />
             </div>
 
-            <div class="flex flex-col md:flex-row items-center space-x-4 space-y-4">
-                <img src="/images/observability.svg" alt="Two people monitoring a cloud system" height="300" width="300" />
+            <div class="flex flex-col items-center space-y-4 bg-zinc-50 p-8 rounded-sm border-b-4 border-orange-600">
                 <div class="flex flex-col space-y-4">
                     <h1 class="text-3xl font-bold">Observability and monitoring</h1>
                     <p class="text-md">
@@ -49,10 +48,10 @@
                         Treating observability as a necessity is crucial, because it helps ensure that systems are resilient and capable of meeting the demands of users, ultimately driving higher reliability and user satisfaction.
                     </p>
                 </div>
+                <img src="/images/observability.svg" alt="Two people monitoring a cloud system" height="300" width="300" />
             </div>
 
-            <div class="flex flex-col md:flex-row items-center space-x-4 space-y-4">
-                <img src="/images/teamwork.svg" alt="A group of people collaborating" height="300" width="300" />
+            <div class="flex flex-col items-center space-y-4 bg-zinc-50 p-8 rounded-sm border-b-4 border-orange-600">
                 <div class="flex flex-col space-y-4">
                     <h1 class="text-3xl font-bold">Teamwork and collaboration</h1>
                     <p class="text-md">
@@ -61,15 +60,10 @@
                         I have worked on many teams as a Software Engineer, and it has been clear to me that strong teamwork is key to continuous improvement and achieving shared goals.
                     </p>
                 </div>
+                <img src="/images/teamwork.svg" alt="A group of people collaborating" height="300" width="300" />
             </div>
         </section>
 
-        <footer class="bg-orange-600 text-zinc-100 flex justify-center h-16">
-            <div class="max-w-7xl flex justify-between items-center flex-grow px-4">
-                <span class="font-bold">Oliver Knox</span>
-                <p>Copyright © 2024</p>
-            </div>
-        </footer>
-
+        <div th:replace="~{fragments/footer :: footerFragment()}"></div>
     </body>
 </html>

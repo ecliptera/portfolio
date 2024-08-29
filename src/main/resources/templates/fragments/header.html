@@ -1,23 +1,23 @@
 <header th:fragment="headerFragment(currentPage)">
-    <nav>
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="flex justify-between">
+    <nav class="text-zinc-100 flex flex-col md:flex-row justify-center">
+        <div class="max-w-7xl flex md:flex-grow justify-between items-center px-4 h-16">
+            <div class="flex flex-grow justify-between">
                 <div>
-                    <a href="/" class="flex items-center py-5 px-2">
+                    <a href="/">
                         <span class="font-bold text-zinc-900">Oliver Knox</span>
                     </a>
                 </div>
 
                 <!-- Desktop Menu -->
-                <div class="hidden sm:flex items-center space-x-1">
-                    <a href="/" class="py-5 px-3" th:classappend="${currentPage == 'HOME' ? 'text-orange-600' : 'text-zinc-900 hover:text-orange-600'}">Home</a>
-                    <a href="/about" class="py-5 px-3" th:classappend="${currentPage == 'ABOUT' ? 'text-orange-600' : 'text-zinc-900 hover:text-orange-600'}">About</a>
-                    <a href="/projects" class="py-5 px-3" th:classappend="${currentPage == 'PROJECTS' ? 'text-orange-600' : 'text-zinc-900 hover:text-orange-600'}">Projects</a>
-                    <a href="/experience" class="py-5 px-3" th:classappend="${currentPage == 'EXPERIENCE' ? 'text-orange-600' : 'text-zinc-900 hover:text-orange-600'}">Experience</a>
+                <div class="hidden md:block flex space-x-4">
+                    <a href="/" th:classappend="${currentPage == 'HOME' ? 'text-orange-600' : 'text-zinc-900 hover:text-orange-600'}">Home</a>
+                    <a href="/about" th:classappend="${currentPage == 'ABOUT' ? 'text-orange-600' : 'text-zinc-900 hover:text-orange-600'}">About</a>
+                    <a href="/projects" th:classappend="${currentPage == 'PROJECTS' ? 'text-orange-600' : 'text-zinc-900 hover:text-orange-600'}">Projects</a>
+                    <a href="/experience" th:classappend="${currentPage == 'EXPERIENCE' ? 'text-orange-600' : 'text-zinc-900 hover:text-orange-600'}">Experience</a>
                 </div>
 
                 <!-- Mobile Button -->
-                <div class="sm:hidden flex items-center">
+                <div class="md:hidden flex items-center">
                     <button id="mobile-menu-button" class="text-zinc-900">
                         <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
@@ -28,21 +28,24 @@
         </div>
 
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden sm:hidden">
-            <a href="/" class="block py-5 px-6 text-sm text-zinc-100" th:classappend="${currentPage == 'HOME' ? 'bg-orange-700' : 'hover:bg-orange-700'}">Home</a>
-            <a href="/about" class="block py-5 px-6 text-sm text-zinc-100" th:classappend="${currentPage == 'ABOUT' ? 'bg-orange-700' : 'hover:bg-orange-700'}">About</a>
-            <a href="/projects" class="block py-5 px-6 text-sm text-zinc-100" th:classappend="${currentPage == 'PROJECTS' ? 'bg-orange-700' : 'hover:bg-orange-700'}">Projects</a>
-            <a href="/experience" class="block py-5 px-6 text-sm text-zinc-100" th:classappend="${currentPage == 'EXPERIENCE' ? 'bg-orange-700' : 'hover:bg-orange-700'}">Experience</a>
+        <div id="mobile-menu" class="hidden">
+            <a href="/" class="block py-5 px-4 text-sm" th:classappend="${currentPage == 'HOME' ? 'bg-orange-600' : 'text-zinc-900 hover:text-orange-600'}">Home</a>
+            <a href="/about" class="block py-5 px-4 text-sm" th:classappend="${currentPage == 'ABOUT' ? 'bg-orange-600' : 'text-zinc-900 hover:text-orange-600'}">About</a>
+            <a href="/projects" class="block py-5 px-4 text-sm" th:classappend="${currentPage == 'PROJECTS' ? 'bg-orange-600' : 'text-zinc-900 hover:text-orange-600'}">Projects</a>
+            <a href="/experience" class="block py-5 px-4 text-sm" th:classappend="${currentPage == 'EXPERIENCE' ? 'bg-orange-600' : 'text-zinc-900 hover:text-orange-600'}">Experience</a>
         </div>
     </nav>
 
     <script>
-        // Toggle mobile menu
         const button = document.getElementById('mobile-menu-button');
         const menu = document.getElementById('mobile-menu');
 
         button.addEventListener('click', () => {
             menu.classList.toggle('hidden');
+        });
+
+        window.addEventListener('resize', () => {
+            menu.classList.add("hidden");
         });
     </script>
 </header>
