@@ -1,26 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
     <div th:replace="~{fragments/head :: headFragment(title = 'Oliver Knox - Projects')}"></div>
-    <body class="bg-zinc-900">
+    <body class="bg-white text-zinc-900">
         <div th:replace="~{fragments/header :: headerFragment(currentPage=${currentPage.name()})}"></div>
 
         <!-- Hero Section -->
-        <section class="bg-orange-700 text-zinc-100 flex justify-center items-center h-96">
+        <section class="bg-orange-600 flex text-zinc-100 justify-center items-center h-96">
             <div class="container mx-auto text-center">
                 <h1 class="text-5xl font-bold mb-4">Projects</h1>
                 <p class="text-lg mb-8">Building software, one commit at a time.</p>
+                <a href="#content" class="py-2 px-4 text-zinc-900 rounded bg-white hover:text-orange-600">Learn more</a>
             </div>
         </section>
 
         <!-- Content Section -->
-        <section class="py-32 px-10 flex justify-center">
-            <div class="max-w-5xl w-full grid lg:grid-cols-2 gap-y-20 gap-x-10">
+        <section id="content" class="max-w-7xl mx-auto flex flex-col space-y-8 px-4 py-16">
                <div th:each="project : ${projects}">
-                   <div th:replace="~{fragments/project-card :: projectCardFragment(project=${project})}"></div>
+                   <div class="grid grid-cols-2 space-y-4 bg-zinc-50 p-8 rounded-sm border-b-4 border-orange-600">
+                       <h1 class="text-3xl font-bold col-start-1" th:text="${project.name()}"></h1>
+                       <p class="text-md flex items-end col-start-1" th:text="${project.description()}"></p>
+                       <a class="flex space-x-2 col-start-2 row-start-2 w-full cursor-pointer items-end justify-end hover:text-orange-600" th:href="${project.url()}">
+                           <p class="text-md" >View on GitHub</p>
+                           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                               <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                           </svg>
+                       </a>
+                   </div>
                </div>
-            </div>
         </section>
 
-        <footer class="bg-orange-700 text-zinc-100 flex justify-center items-center h-16"></footer>
+        <div th:replace="~{fragments/footer :: footerFragment()}"></div>
     </body>
 </html>
